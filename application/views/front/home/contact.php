@@ -12,8 +12,9 @@
     }
     .contact-items div h6
     {
-        margin-top: 16px;
-        width: 100%;
+        display: block;
+        margin: 16px auto;
+        width: auto;
         color: var(--main-bg-color);
         text-align: center;
     }
@@ -32,17 +33,20 @@
 </style>
 <div class="container-fluid h-100 contact">
     <div class="row align-items-center h-100 contact-items">
-        <div class="col-md-4 align-items-center">
+      <!--  <div class="col-md-12">
+            <h1 style="text-align: center;color: var(--main-bg-color);font-family: 'Crimson Text', serif; font-weight: 700;">CONTACT US</h1>
+        </div>-->
+        <div class="col-md-4">
             <i class="fas fa-envelope"></i>
-            <h6>Email</h6>
+            <h6 id="email">Email</h6>
         </div>
         <div class="col-md-4">
             <i class="fas fa-map-marker-alt"></i>
-            <h6>Location</h6>
+            <h6 id="location">Location</h6>
         </div>
         <div class="col-md-4">
             <i class="fas fa-phone"></i>
-            <h6>Phone</h6>
+            <h6 id="phone">Phone</h6>
         </div>
     </div>
 </div>
@@ -114,4 +118,28 @@
     </div>
 </div>
 
+<script>
+    $(document).ready(function () {
+        $("#email").mouseover(function () {
+          $("#email").text("tejasrana30898@gmail.com")
+       });
+        $("#email").mouseout(function () {
+            $("#email").text("Email")
+        });
+
+        $("#location").mouseover(function () {
+            $("#location").text("India")
+        });
+        $("#location").mouseout(function () {
+            $("#location").text("Location")
+        });
+
+        $("#phone").mouseover(function () {
+            $("#phone").text("+91-700 160 3384")
+        });
+        $("#phone").mouseout(function () {
+            $("#phone").text("Phone")
+        });
+    });
+</script>
 
