@@ -55,4 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['Gallery']='Front/gallery';
 $route['Contact']='Front/contact';
 $route['About']='Front/about';
-$route['Auth']='Auth/signin';
+$route['SignIn']='Front/signin';
+$route['SignUp']='Front/signup';

@@ -39,5 +39,12 @@ class Front extends MY_Controller
     {
         $this->render("front/home/about", "About Us");
     }
-
+    public function signin()
+    {
+        $this->render("auth/signin","Sign In");
+    }
+    public function signup()
+    {
+        $this->render("auth/signup","Sign Up");
+    }
 }

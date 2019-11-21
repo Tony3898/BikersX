@@ -158,7 +158,7 @@
             <div class="our-team">
                 <img src="<?php echo base_url("assets/images/team1.jpeg") ?>">
                 <div class="team-content">
-                    <h3 class="title">Tejas Rana</h3>
+                    <h3 class="title">Tejas</h3>
                     <span class="post">Web Developer</span>
                     <ul class="social">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

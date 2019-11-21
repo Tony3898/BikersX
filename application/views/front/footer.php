@@ -119,7 +119,7 @@
             <h5 class="mb-1">Register for free</h5>
         </li>
         <li class="list-inline-item">
-            <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+            <a href="<?php echo base_url("SignUp")?>" class="btn btn-danger btn-rounded">Sign up!</a>
         </li>
     </ul>
     <!-- Call to action -->
@@ -158,7 +158,7 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2019 Copyright:
-        <a href="https://github.com/Tony3898"> Tejas Rana</a>
+        <a href="https://github.com/Tony3898" target="_blank"> Tejas Rana</a>
     </div>
     <!-- Copyright -->
 
