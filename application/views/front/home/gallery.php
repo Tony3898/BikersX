@@ -2,7 +2,6 @@
     .container-fluid.gallery-container {
         background:linear-gradient(var(--second-bg-color),var(--accent-color),var(--second-bg-color));
         color: var(--main-bg-color);
-        min-height: 100vh;
         padding: 30px 50px;
     }
 
@@ -10,13 +9,6 @@
         text-align: center;
         margin-top: 80px;
         font-weight: bold;
-    }
-
-    .gallery-container p.page-description {
-        text-align: center;
-        margin: 25px auto;
-        font-size: 18px;
-        color: #999;
     }
 
     .tz-gallery {
@@ -67,9 +59,6 @@
         opacity: 0.5;
     }
 
-    .baguetteBox-button {
-        background-color: transparent !important;
-    }
 </style>
 <div class="container-fluid gallery-container">
 

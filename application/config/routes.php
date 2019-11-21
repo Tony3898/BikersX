@@ -54,3 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['Gallery']='Front/gallery';
 $route['Contact']='Front/contact';
+$route['About']='Front/about';
+$route['Auth']='Auth/signin';

@@ -35,5 +35,9 @@ class Front extends MY_Controller
     {
         $this->render("front/home/contact", "Contact");
     }
+    public function about()
+    {
+        $this->render("front/home/about", "About Us");
+    }
 
 }
