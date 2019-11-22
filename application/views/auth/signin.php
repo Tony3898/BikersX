@@ -20,8 +20,9 @@
     <div class="row h-100 align-items-center">
         <div class="col-md-4 offset-md-4 col-sm-12 self-sign-in-div">
             <h4 class="h1-responsive font-weight-bold text-center">Welcome Back Rider</h4>
+            <?php get_msg();?>
             <br>
-            <form id="signin-form" name="signin-form" action="<?php echo base_url("") ?>"
+            <form id="signin-form" name="signin-form" action="<?php echo base_url("auth/signin") ?>"
                   method="POST">
 
                 <div class="row">
@@ -62,3 +63,5 @@
         </div>
     </div>
 </div>
+
+
