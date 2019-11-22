@@ -7,17 +7,36 @@ class Front extends MY_Controller
     {
         parent::__construct();
     }
+
     public function home()
     {
-        $this->render("front/home/index","Home");
+        $this->render("front/home/index", "Home");
     }
 
-
-    public function render($view,$title,$data=array())
+    public function welcome()
     {
-        $data['title']=$title;
-        $this->load->view("front/header",$data);
-        $this->load->view($view,$data);
-        $this->load->view("front/footer",$data);
+        $this->load->view('welcome_message');
+    }
+
+    public function gallery()
+    {
+        $this->render("front/home/gallery", "Gallery");
+    }
+
+    public function contact()
+    {
+        $this->render("front/home/contact", "Contact");
+    }
+    public function about()
+    {
+        $this->render("front/home/about", "About Us");
+    }
+    public function signin()
+    {
+        $this->render("auth/signin","Sign In");
+    }
+    public function signup()
+    {
+        $this->render("auth/signup","Sign Up");
     }
 }
