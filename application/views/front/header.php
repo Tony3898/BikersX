@@ -1,6 +1,6 @@
 <?php /*echo "<pre>" ;
 print_r($_SESSION);
-die(); */?>
+die(); */ ?>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -51,13 +51,21 @@ die(); */?>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Contact") ?>">Contact Us</a>
             </li>
-            <?php if(empty($this->session->userdata['bikers_logged_id']['_id'])): ?>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url("SignIn") ?>">Sign In</a>
-            </li>
-            <?php else:?>
+            <?php if (empty($this->session->userdata['bikers_logged_id']['_id'])): ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url("Auth/signOut") ?>">Sign Out</a>
+                    <a class="nav-link" href="<?php echo base_url("SignIn") ?>">Sign In</a>
+                </li>
+            <?php else: ?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Welcome <?php echo $this->session->userdata['bikers_logged_id']['name'] ?>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="<?php echo base_url("Profile/user_profile") ?>">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url("Auth/signOut") ?>">Sign Out</a>
+                    </div>
                 </li>
             <?php endif; ?>
         </ul>

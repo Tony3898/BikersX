@@ -27,16 +27,25 @@ class Front extends MY_Controller
     {
         $this->render("front/home/contact", "Contact");
     }
+
     public function about()
     {
         $this->render("front/home/about", "About Us");
     }
+
     public function signin()
     {
-        $this->render("auth/signin","Sign In");
+        if (!isset($_SESSION['bikers_logged_id']))
+            $this->render("auth/signin", "Sign In");
+        else
+            $this->render("front/home/index", "Home");
     }
+
     public function signup()
     {
-        $this->render("auth/signup","Sign Up");
+        if (!isset($_SESSION['bikers_logged_id']))
+            $this->render("auth/signup", "Sign Up");
+        else
+            $this->render("front/home/index", "Home");
     }
 }

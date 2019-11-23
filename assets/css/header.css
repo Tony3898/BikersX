@@ -39,3 +39,15 @@ html, body {
 {
     color: var(--accent-color);
 }
+
+.dropdown-menu,.dropdown-menu a
+{
+    background: var(--second-bg-color);
+    color: var(--main-bg-color);
+}
+
+.dropdown-menu a:hover
+{
+    background: none;
+    color: var(--accent-color);
+}
