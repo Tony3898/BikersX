@@ -1,13 +1,15 @@
 <!-- Footer -->
 <style>
-    a{
+    a {
         color: var(--accent-color);
     }
-    a:hover{
+
+    a:hover {
         color: var(--main-bg-color);
     }
 </style>
-<footer class="page-footer font-small stylish-color-dark pt-4" style="background: var(--second-bg-color);color: var(--main-bg-color)">
+<footer class="page-footer font-small stylish-color-dark pt-4"
+        style="background: var(--second-bg-color);color: var(--main-bg-color)">
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
@@ -113,19 +115,19 @@
 
     <hr>
 
-    <!-- Call to action -->
-    <ul class="list-unstyled list-inline text-center py-2">
-        <li class="list-inline-item">
-            <h5 class="mb-1">Register for free</h5>
-        </li>
-        <li class="list-inline-item">
-            <a href="<?php echo base_url("SignUp")?>" class="btn btn-danger btn-rounded">Sign up!</a>
-        </li>
-    </ul>
-    <!-- Call to action -->
-
-    <hr>
-
+    <?php if (empty($this->session->userdata['bikers_logged_id']['_id'])): ?>
+        <!-- Call to action -->
+        <ul class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+                <h5 class="mb-1">Register for free</h5>
+            </li>
+            <li class="list-inline-item">
+                <a href="<?php echo base_url("SignUp") ?>" class="btn btn-danger btn-rounded">Sign up!</a>
+            </li>
+        </ul>
+        <hr>
+        <!-- Call to action -->
+    <?php endif; ?>
     <!-- Social buttons -->
     <ul class="list-unstyled list-inline text-center">
         <li class="list-inline-item">
